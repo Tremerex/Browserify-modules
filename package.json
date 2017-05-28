@@ -1,0 +1,23 @@
+{
+  "name": "Browserify-modules",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "scripts": {
+    "server": "nodemon --watch server -- server/index.js",
+    "browserify": "browserify ./src/entry.js -o ./public/bundle.js",
+    "watch-js": "watchify ./src/entry.js -o ./public/bundle.js -dv",
+    "start": "npm run watch-js | npm run server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "devDependencies": {
+    "browserify": "^14.4.0",
+    "nodemon": "^1.11.0",
+    "watchify": "^3.9.0"
+  }
+}
